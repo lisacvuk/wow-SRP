@@ -1,3 +1,3 @@
 all :
-	g++ -g main.cpp -lgmp -lgmpxx -lssl -lcrypto -o out.x86
+	g++ -g main.cpp SRP.cpp BigNum.cpp -lssl -lcrypto -o out.x86
 
