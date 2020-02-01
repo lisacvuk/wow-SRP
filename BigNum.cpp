@@ -4,6 +4,8 @@
 
 #include <openssl/bn.h>
 
+using namespace WOW_SRP;
+
 BigNum::BigNum(){
     bn = BN_new();
 }

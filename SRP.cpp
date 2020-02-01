@@ -9,13 +9,13 @@
 #include <openssl/sha.h>
 #include <openssl/evp.h>
 
-SRPClient::SRPClient(){
+WOW_SRP::SRPClient::SRPClient(){
     k.from_dec("3");
     a.from_hex("8266845392F83273477A763E6356B795737D49");
 
 }
 
-void SRPClient::step1(std::string username, std::string password,
+void WOW_SRP::SRPClient::step1(std::string username, std::string password,
                       BigNum B, BigNum g, BigNum N, BigNum s){
     
     unsigned char* result = new unsigned char[20];
