@@ -49,7 +49,7 @@ void WOW_SRP::SRPClient::step1(std::string username, std::string password,
 
     EVP_DigestInit(digest, EVP_sha1());
     EVP_DigestUpdate(digest, s.to_rev_bytearray(32), 32);
-    EVP_DigestUpdate(digest, p.to_bytearray(20), 20);
+    EVP_DigestUpdate(digest, p.to_rev_bytearray(20), 20);
     
     EVP_DigestFinal(digest, result, NULL);
     std::reverse(result, result+20);

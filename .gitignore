@@ -1,3 +1,6 @@
 main_working.cpp
 result.txt
-out.x86
+build/
+build/*
+example/build/
+example/build/*
